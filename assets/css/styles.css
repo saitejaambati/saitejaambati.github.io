@@ -1,63 +1,179 @@
-    .container {
-      position: fixed;
-      overflow: auto;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      scroll-behavior: smooth;
-      height: 100%;
-    }
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Row */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+.header-row .box h1 {
+    font-size: 24px;
+}
+
+.header-row ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.header-row ul li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+.header-row ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.header-row ul li a:hover {
+    color: #f4a261;
+}
+
+/* Section Rows */
+.row {
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.row h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.row .box {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Buttons */
+button {
+    background-color: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e76f51;
+}
+
+/* Project Section */
+#projects {
+    background-color: lightcoral;
+    padding: 50px 0;
+}
+
+#projects .box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#projects .box a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Services Section */
+#services {
+    background-color: lightblue;
+    padding: 50px 0;
+}
+
+#services .box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Contact Section */
+#contact {
+    background-color: lightgoldenrodyellow;
+    padding: 50px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .header-row {
-      background-color: orange;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0px;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .header-row .box {
-      padding: 10px;
+    .header-row ul {
+        flex-direction: column;
     }
 
-    .header-row li {
-      display: inline;
-      padding: 5px;
-      font-size: larger;
-    }
-
-    .header-row a {
-      text-decoration: none;
-    }
-
-    .header-row a:hover {
-      text-decoration: underline;
-    }
-
-    .row {
-      padding: 100px;
-      height: 75%;
+    .header-row ul li {
+        margin: 10px 0;
     }
 
     .row .box {
-      padding: 20px;
-      margin: 10px;
+        width: 100%;
     }
-
-    .footer {
-      padding: 20px;
-      margin: 0px;
-      background-color: black;
-      color: white;
-      font-size: large;
+    
+    #projects .box, #services .box {
+        width: 90%;
+        display: block;
+        margin: 20px auto;
     }
-
-    button {
-      background-color: teal;
-      padding: 10px;
-      color: white;
-      border: none;
-      border-radius: 10%;
-    }
+}
